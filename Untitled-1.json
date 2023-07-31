@@ -1,0 +1,206 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ec2:Describe*",
+				"ec2:Get*",
+				"ec2:ListImagesInRecycleBin",
+				"ec2:ListSnapshotsInRecycleBin",
+				"ec2:SearchLocalGatewayRoutes",
+				"ec2:SearchTransitGatewayRoutes",
+				"ec2messages:Get*"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cognito-identity:Describe*",
+				"cognito-identity:GetCredentialsForIdentity",
+				"cognito-identity:GetIdentityPoolRoles",
+				"cognito-identity:GetOpenIdToken",
+				"cognito-identity:GetOpenIdTokenForDeveloperIdentity",
+				"cognito-identity:List*",
+				"cognito-identity:Lookup*",
+				"cognito-idp:AdminGet*",
+				"cognito-idp:AdminList*",
+				"cognito-idp:Describe*",
+				"cognito-idp:Get*",
+				"cognito-idp:List*",
+				"cognito-sync:Describe*",
+				"cognito-sync:Get*",
+				"cognito-sync:List*",
+				"cognito-sync:QueryRecords"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"appsync:Get*",
+				"appsync:List*",
+				"appsync:ListApiKeys",
+				"appsync:ListDataSources",
+				"appsync:ListGraphqlApis"
+			],
+			"Resource": [
+				"arn:aws:appsync:us-east-1:577505081623:apis/ubp6ne4gpjdsthuanbsqc35bhu",
+				"arn:aws:appsync:us-east-1:577505081623:apis/ufnjwusoofb3hpcf7vb3otjkdy",
+				"arn:aws:appsync:us-east-1:577505081623:/v1/apis/ubp6ne4gpjdsthuanbsqc35bhu/*",
+				"arn:aws:appsync:us-east-1:577505081623:/v1/apis/ubp6ne4gpjdsthuanbsqc35bhu",
+				"arn:aws:appsync:us-east-1:577505081623:*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"amplify:GetApp",
+				"amplify:GetBranch",
+				"amplify:GetDomainAssociation",
+				"amplify:GetJob",
+				"amplify:ListApps",
+				"amplify:ListBranches",
+				"amplify:ListDomainAssociations",
+				"amplify:ListJobs",
+				"amplify:ListBackendEnvironments",
+				"amplify:GetBackendEnvironment",
+				"amplifybackend:ListS3Buckets",
+				"amplifybackend:GetBackendAPI",
+				"amplifybackend:GetBackendAPIModels",
+				"amplifybackend:GetBackendAuth",
+				"amplifybackend:GetBackendJob",
+				"amplifybackend:GetBackend",
+				"amplifybackend:GetBackendStorage",
+				"amplifybackend:GetToken"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3-object-lambda:GetObject",
+				"s3-object-lambda:GetObjectAcl",
+				"s3-object-lambda:GetObjectLegalHold",
+				"s3-object-lambda:GetObjectRetention",
+				"s3-object-lambda:GetObjectTagging",
+				"s3-object-lambda:GetObjectVersion",
+				"s3-object-lambda:GetObjectVersionAcl",
+				"s3-object-lambda:GetObjectVersionTagging",
+				"s3-object-lambda:ListBucket",
+				"s3-object-lambda:ListBucketMultipartUploads",
+				"s3-object-lambda:ListBucketVersions",
+				"s3-object-lambda:ListMultipartUploadParts",
+				"s3:DescribeJob",
+				"s3:Get*",
+				"s3:List*"
+			],
+			"Resource": [
+				"arn:aws:s3:::amplify-rfp-develop-210905-deployment",
+				"arn:aws:s3:::amplify-rfp-main-211513-deployment",
+				"arn:aws:s3:::amplify-rfp-develop-210905-deployment/*",
+				"arn:aws:s3:::amplify-rfp-main-211513-deployment/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"lambda:Get*",
+				"lambda:List*"
+			],
+			"Resource": [
+				"arn:aws:lambda:us-east-1:577505081623:function:getVerificationCode-develop",
+				"arn:aws:lambda:us-east-1:577505081623:function:getVerificationCode-main"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": "elasticloadbalancing:Describe*",
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cloudwatch:GetMetricData",
+				"cloudwatch:ListMetrics",
+				"cloudwatch:GetMetricStatistics",
+				"cloudwatch:Describe*",
+				"cloudwatch:Get*",
+				"cloudwatch:List*",
+				"logs:*"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "autoscaling:Describe*",
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"codecommit:BatchGet*",
+				"codecommit:Describe*",
+				"codecommit:Get*",
+				"codecommit:GitPull",
+				"codecommit:List*",
+				"codecommit:EvaluatePullRequestApprovalRules",
+                "codecommit:ListRepositories"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"dynamodb:BatchGet*",
+				"dynamodb:Describe*",
+				"dynamodb:Get*",
+				"dynamodb:List*",
+				"dynamodb:PartiQLSelect",
+				"dynamodb:Query",
+				"dynamodb:Scan",
+				"dynamodb:GetRecords",
+				"dynamodb:ListTables"
+			],
+			"Resource": [
+				"arn:aws:dynamodb:us-east-1:577505081623:table/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"redshift:Describe*",
+				"redshift:GetReservedNodeExchangeOfferings",
+				"redshift:View*",
+				"redshift:DescribeClusters",
+				"redshift:DescribeEvents",
+				"redshift:DescribeClusterSnapshots",
+				"events:ListRules",
+				"events:ListTargetsByRule",
+				"events:DescribeRule"
+			],
+			"Resource": [
+				"arn:aws:redshift:us-east-1:577505081623:snapshot:*/*",
+				"arn:aws:redshift:us-east-1:577505081623:event:*",
+				"arn:aws:redshift:us-east-1:577505081623:cluster:*",
+				"arn:aws:events:us-east-1:577505081623:rule/*",
+				"arn:aws:events:us-east-1:577505081623:rule/QS-redshift-cluster-1-redshift-cluster-1-sync-query"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ses:BatchGetMetricData",
+				"ses:Describe*",
+				"ses:Get*",
+				"ses:List*",
+				"workmail:Describe*",
+				"workmail:Get*",
+				"workmail:List*",
+				"workmail:Search*"
+			],
+			"Resource": "*"
+		}
+	]
+}
